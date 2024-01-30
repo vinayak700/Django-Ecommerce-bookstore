@@ -25,7 +25,7 @@ SECRET_KEY = '4c!5dmr29c&9d(5#ekg%51_0b+5-pagr!&i((1==-5zoz$h^8^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'ecom_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '3e5GBBDb1BFc41f1Dcg314bd*BFGfBBg',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '38235',
     }
 }
 
@@ -141,4 +145,5 @@ STATICFILES_FINDERS = [
 LOGIN_REDIRECT_URL = 'list'   # requires an html file (login.html).
 LOGOUT_REDIRECT_URL = 'list'  # doesn't require any html file.
 
-# website url: https://https://ym-djecom.herokuapp.com/
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
