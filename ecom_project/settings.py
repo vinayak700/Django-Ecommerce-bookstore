@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django-ecommerce-bookstore.wsgi.application'
+WSGI_APPLICATION = 'ecom_project.wsgi.application'
 
 
 # Database
